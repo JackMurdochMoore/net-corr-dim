@@ -1,4 +1,4 @@
-# small-world
+# net-corr-dim
 Code to estimate correlation dimension of complex networks. Developed in MATLAB R2020a.
 
 To see examples of how to use this code, please run
