@@ -6,7 +6,13 @@
 % c(s) = s^(D-1)
 % where D is correlation dimension and c(s) is correlation at distance s.
 %
-% 
+%
+% Associated with 
+% "Correlation dimension in empirical networks" 
+% by 
+% Jack Murdoch Moore, Haiying Wang, Michael Small, Gang Yan, Huijie Yang, 
+% and Changgui Gu. 
+%
 function [d1, d3, d1P, d3P, d1RP, d3RP] = show_fit_func(ss, nn, saveStr, saveFigFlag, varargin)
 
 if (numel(varargin) == 0)

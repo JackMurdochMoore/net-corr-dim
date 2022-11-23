@@ -1,6 +1,21 @@
+% Generate a higher-dimensional small world network and estimate its
+% correlation dimension.
+%
+% Associated with 
+% "Correlation dimension in empirical networks" 
+% by 
+% Jack Murdoch Moore, Haiying Wang, Michael Small, Gang Yan, Huijie Yang, 
+% and Changgui Gu. 
+
+clear;
+
+%Generate small world network:
+
 D = 3; N0 = 1000; k = 10; p = 0.01;
 A = small_world_manhattan(N0, k, D, p); N = size(A, 1);
 [ss, nn] = count_distances(A);
+
+%Estimate correlation dimension:
 
 disp('Using model c(s) ∝ s^{D-1}:');
 [DVec, sMaxVec, D2Mat, codeCell, descriptionCell, DMat, objFuncMat] = est_corr_dim_3(ss, nn);

@@ -9,6 +9,13 @@
 % Example use:
 % D00 = 3; N00 = 10000; k00 = 8; numRep = 100; compare_corr_dim_est_3(D00, N00, k00, numRep); 
 % 
+% 
+% Associated with 
+% "Correlation dimension in empirical networks" 
+% by 
+% Jack Murdoch Moore, Haiying Wang, Michael Small, Gang Yan, Huijie Yang, 
+% and Changgui Gu. 
+%
 function compare_corr_dim_est_3(D00, N00, k00, numRep)
 
 saveDataFolder = 'results-est-dim-3';

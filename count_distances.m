@@ -1,5 +1,13 @@
 % Given adjacency matrix A, work out numbers nn of pairs of nodes at each
 % non-zero, non-maximum distance aa. 
+%
+%
+% Associated with 
+%
+% "Correlation dimension in empirical networks" 
+% by 
+% Jack Murdoch Moore, Haiying Wang, Michael Small, Gang Yan, Huijie Yang, 
+% and Changgui Gu
 % 
 function [ss, nn] = count_distances(A)
 

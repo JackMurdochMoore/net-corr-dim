@@ -22,8 +22,8 @@
 % descriptionCell - Description of method of estimation
 % DMat - DMat(i, j) records estimate of network correlation dimension D
 %        made using method i using upper cutoff number j
-% objFuncMat - The function which is minimised (either locally or globally)
-%              to choose the upper cutoff sMax
+% objFuncMat - Value at optimum of the function which is minimised (either
+%              locally or globally) to choose the upper cutoff sMax 
 % 
 % Example use:
 % D = 2; N0 = 1000; k = 10; p = 0;
@@ -31,6 +31,13 @@
 % [ss, nn] = count_distances(A);
 % DLims = [-Inf, Inf]; [DVec, sMaxVec, D2Mat, codeCell, descriptionCell, DMat, objFuncMat] = est_corr_dim_3(ss, nn, DLims);
 % 
+% 
+% Associated with 
+% "Correlation dimension in empirical networks" 
+% by 
+% Jack Murdoch Moore, Haiying Wang, Michael Small, Gang Yan, Huijie Yang, 
+% and Changgui Gu. 
+%
 function [DVec, sMaxVec, D2Mat, codeCell, descriptionCell, DMat, objFuncMat] = est_corr_dim_3(ss, nn, varargin)
 if (numel(varargin) == 0)
     DLims = [-Inf, Inf];
@@ -111,7 +118,7 @@ for iiDType = 1:numDTypes
     if (iiDType ~= 2)%Final global minimum:
         [~, ii_s] = min(fliplr(objFunc)); ii_s = numel(objFunc) - (ii_s - 1);
     else
-        %Final final local minimum:
+        %Final local minimum:
         [~, locMinInd] = find_local_minima(objFunc);
         ii_s = locMinInd(end);
     end

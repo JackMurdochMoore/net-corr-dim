@@ -4,6 +4,8 @@
 % chosen to be the target of a rewired edge can depend on distance d as
 % p_j ~ 1/(kappa + omega*d^-sigma).
 % 
+% Consider only largest connected component of generated network.
+% 
 % rewireFlag == 1 - rewire links
 %               0 - add links
 % 
@@ -11,15 +13,31 @@
 %   No links are rewired such that the (non-network) distance between target
 %   and recipient is in lower fraction a or upper fraction (1 - b).
 % 
+% 
 % Example use:
-% N = 400; k = 6; D = 2; p = 0.05; A = small_world_manhattan(N, k, D, p, sigma, kappa, omega, rewireFlag, lowerAndUpperQuantile); G = graph(A); figure; plot(G, 'Layout', 'Force3'); allDeg = G.degree; minDeg = min(allDeg); maxDeg = max(allDeg); figure; histogram(allDeg, minDeg:maxDeg); xlabel('Degree'); ylabel('Count'); allDist = G.distances; allDist = allDist(:); minDist = min(allDist); maxDist = max(allDist); figure; nn = histcounts(allDist, (minDist - 0.5):(maxDist + 0.5)); figure; loglog(minDist:maxDist, nn); xlabel('Distance'); ylabel('Count');  
-% N = 400; k = 6; D = 2; p = 0.05; sigma = 3; kappa = 1; omega = 0; rewireFlag = 1; lowerAndUpperQuantile = [-eps, 1 + eps]; A = small_world_manhattan(N, k, D, p, sigma, kappa, omega, rewireFlag, lowerAndUpperQuantile); G = graph(A); figure; plot(G, 'Layout', 'Force3'); allDeg = G.degree; minDeg = min(allDeg); maxDeg = max(allDeg); figure; histogram(allDeg, minDeg:maxDeg); xlabel('Degree'); ylabel('Count'); allDist = G.distances; allDist = allDist(:); minDist = min(allDist); maxDist = max(allDist); figure; nn = histcounts(allDist, (minDist - 0.5):(maxDist + 0.5)); figure; loglog(minDist:maxDist, nn); xlabel('Distance'); ylabel('Count');  
-% N = 2000; k = 6; D = 3; p = 0; sigma = 0; kappa = 1; omega = 0; rewireFlag = 1; lowerAndUpperQuantile = [-eps, 1 + eps]; A = small_world_manhattan(N, k, D, p, sigma, kappa, omega, rewireFlag, lowerAndUpperQuantile); G = graph(A); figure; plot(G, 'Layout', 'Force3'); allDeg = G.degree; minDeg = min(allDeg); maxDeg = max(allDeg); figure; histogram(allDeg, minDeg:maxDeg); xlabel('Degree'); ylabel('Count'); allDist = G.distances; allDist = allDist(:); minDist = min(allDist); maxDist = max(allDist); figure; nn = histcounts(allDist, (minDist - 0.5):(maxDist + 0.5)); figure; loglog(minDist:maxDist, nn); xlabel('Distance'); ylabel('Count'); figure; plot(minDist:maxDist, nn); xlabel('Distance'); ylabel('Count');  
+% N = 400; k = 6; D = 2; p = 0.05; A = small_world_manhattan_lcc(N, k, D, p, sigma, kappa, omega, rewireFlag, lowerAndUpperQuantile); G = graph(A); figure; plot(G, 'Layout', 'Force3'); allDeg = G.degree; minDeg = min(allDeg); maxDeg = max(allDeg); figure; histogram(allDeg, minDeg:maxDeg); xlabel('Degree'); ylabel('Count'); allDist = G.distances; allDist = allDist(:); minDist = min(allDist); maxDist = max(allDist); figure; nn = histcounts(allDist, (minDist - 0.5):(maxDist + 0.5)); figure; loglog(minDist:maxDist, nn); xlabel('Distance'); ylabel('Count');  
+% N = 400; k = 6; D = 2; p = 0.05; sigma = 3; kappa = 1; omega = 0; rewireFlag = 1; lowerAndUpperQuantile = [-eps, 1 + eps]; A = small_world_manhattan_lcc(N, k, D, p, sigma, kappa, omega, rewireFlag, lowerAndUpperQuantile); G = graph(A); figure; plot(G, 'Layout', 'Force3'); allDeg = G.degree; minDeg = min(allDeg); maxDeg = max(allDeg); figure; histogram(allDeg, minDeg:maxDeg); xlabel('Degree'); ylabel('Count'); allDist = G.distances; allDist = allDist(:); minDist = min(allDist); maxDist = max(allDist); figure; nn = histcounts(allDist, (minDist - 0.5):(maxDist + 0.5)); figure; loglog(minDist:maxDist, nn); xlabel('Distance'); ylabel('Count');  
+% N = 2000; k = 6; D = 3; p = 0; sigma = 0; kappa = 1; omega = 0; rewireFlag = 1; lowerAndUpperQuantile = [-eps, 1 + eps]; A = small_world_manhattan_lcc(N, k, D, p, sigma, kappa, omega, rewireFlag, lowerAndUpperQuantile); G = graph(A); figure; plot(G, 'Layout', 'Force3'); allDeg = G.degree; minDeg = min(allDeg); maxDeg = max(allDeg); figure; histogram(allDeg, minDeg:maxDeg); xlabel('Degree'); ylabel('Count'); allDist = G.distances; allDist = allDist(:); minDist = min(allDist); maxDist = max(allDist); figure; nn = histcounts(allDist, (minDist - 0.5):(maxDist + 0.5)); figure; loglog(minDist:maxDist, nn); xlabel('Distance'); ylabel('Count'); figure; plot(minDist:maxDist, nn); xlabel('Distance'); ylabel('Count');  
 %
 % Notes:
 % 1. When p = 0 the graph is regular (each node has the same degree).
 % 2. When either omega = 0 or sigma = 0 (and kappa > 0) there is no
 %    dependence on distance. 
+%
+% 
+% Associated with 
+%
+% "Correlation dimension in empirical networks" 
+% by 
+% Jack Murdoch Moore, Haiying Wang, Michael Small, Gang Yan, Huijie Yang, 
+% and Changgui Gu
+% 
+% and with
+% 
+% "Epidemic dynamics on higher-dimensional small world networks"
+% by
+% Haiying Wang, Jack Murdoch Moore, Michael Small, Jun Wang, Huijie Yang
+% and Changgui Gu.
 %
 function A = small_world_manhattan_lcc(N, k, D, p, varargin)
 L = round(N^(1/D));

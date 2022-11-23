@@ -2,6 +2,12 @@
 % and show_fit_func
 % 
 % 
+% Associated with 
+% "Correlation dimension in empirical networks" 
+% by 
+% Jack Murdoch Moore, Haiying Wang, Michael Small, Gang Yan, Huijie Yang, 
+% and Changgui Gu. 
+%
 function [mm, locMinInd] = find_local_minima(xx)
 xx = xx(:)';%Make sure xx is a row vector
 nonNANInd = find(~isnan(xx));

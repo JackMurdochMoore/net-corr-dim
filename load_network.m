@@ -1,3 +1,11 @@
+% Load an empirical network from data.
+% 
+% Associated with 
+% "Correlation dimension in empirical networks" 
+% by 
+% Jack Murdoch Moore, Haiying Wang, Michael Small, Gang Yan, Huijie Yang, 
+% and Changgui Gu. 
+%
 function [A, nameStr, nameStr2, networkFile] = load_network(networkFlag)
 
 nameStr2 = '';

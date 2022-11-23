@@ -4,6 +4,8 @@
 % chosen to be the target of a rewired edge can depend on distance d as
 % p_j ~ 1/(kappa + omega*d^-sigma).
 % 
+% % Consider all connected components of generated network.
+% 
 % rewireFlag == 1 - rewire links
 %               0 - add links
 % 
@@ -20,6 +22,21 @@
 % 1. When p = 0 the graph is regular (each node has the same degree).
 % 2. When either omega = 0 or sigma = 0 (and kappa > 0) there is no
 %    dependence on distance. 
+%
+% 
+% Associated with 
+%
+% "Correlation dimension in empirical networks" 
+% by 
+% Jack Murdoch Moore, Haiying Wang, Michael Small, Gang Yan, Huijie Yang, 
+% and Changgui Gu
+% 
+% and with
+% 
+% "Epidemic dynamics on higher-dimensional small world networks"
+% by
+% Haiying Wang, Jack Murdoch Moore, Michael Small, Jun Wang, Huijie Yang
+% and Changgui Gu.
 %
 function A = small_world_manhattan(N, k, D, p, varargin)
 L = round(N^(1/D));
