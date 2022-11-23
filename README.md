@@ -5,7 +5,7 @@ Associated with the manuscript\
 "Correlation dimension in empirical networks"\
 by\
 Jack Murdoch Moore, Haiying Wang, Michael Small, Gang Yan, Huijie Yang, and Changgui Gu,\
-which is currently under review.\
+which is currently under review.
 
 To see examples of how to use this code, please run:\
 example
