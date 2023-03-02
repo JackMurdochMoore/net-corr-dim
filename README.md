@@ -4,7 +4,7 @@ Code to estimate correlation dimension of complex networks. Developed in MATLAB 
 __Associated with the paper__\
 "Correlation dimension in empirical networks"\
 by\
-Jack Murdoch Moore, Haiying Wang, Michael Small, Gang Yan, Huijie Yang, and Changgui Gu.\
+Jack Murdoch Moore, Haiying Wang, Michael Small, Gang Yan, Huijie Yang, and Changgui Gu.
 
 __Correlation dimension__ D is defined by the power-law\
 c(s) = s^(D-1),\
@@ -23,7 +23,7 @@ __Folders:__\
 _figures_: Folder in which figures are saved.\
 _networks_: Data defining empirical networks.\
 _results-est-dim-3_: Folder in which results for model c(s) = s^(D-1) are saved.\
-_results-est-dim-4_: Folder in which results for model C(s) = s^D are saved.\
+_results-est-dim-4_: Folder in which results for model C(s) = s^D are saved.
 
 __Functions and scripts:__\
 _compare_corr_dim_est_3.m:_ Estimate correlation dimension and scaling interval of synthetic networks using different methods and model c(s) = s^(D-1), and save results in folder results-est-dim-3.\
@@ -40,7 +40,7 @@ _plot_corr_dim_estimates.m:_ Plot results of benchmarking, previously saved in f
 _show_fit_func.m:_ Fit power-law to an interval and illustrate fit and objective function (negative log-likelihood per observation).\
 _show_fit_script.m:_ Illustrate fit and fitting process for empirical or synthetic networks by calling function show_fit_func.m.\
 _small_world_manhattan.m:_ Generate lattice* or small world network*.\
-_small_world_manhattan_lcc.m:_ Generate lattice* or small world network* and retain only its largest connected component.\
+_small_world_manhattan_lcc.m:_ Generate lattice* or small world network* and retain only its largest connected component.
 
 \* Lattices and small world networks are derived from regular $D$-dimensional toroidal lattices defined using a periodic version of the city block (or Manhattan or taxi cab) metric mentioned but not explored in "Epidemic dynamics on higher-dimensional small world networks", _Applied Mathematics and Computation_
 421, 126911, by H. Wang, J. M. Moore, M. Small, J. Wang, H. Yang and C. Gu (2022) (associated code at https://github.com/JackMurdochMoore/small-world).
