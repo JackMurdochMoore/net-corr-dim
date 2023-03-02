@@ -1,5 +1,5 @@
 % Log-likelihood per observation for model
-% c(s) = s^(d-1),
+% c(s) = s^d,
 % where c(s) is correlation at distance s.
 % 
 % d is exponent (d + 1 is correlation dimension)
