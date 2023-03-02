@@ -6,10 +6,10 @@ __Associated with the paper__\
 by\
 Jack Murdoch Moore, Haiying Wang, Michael Small, Gang Yan, Huijie Yang, and Changgui Gu.\
 
-__Correlation dimension__ D is defined by the power-law
-c(s) = s^(D-1),
-or the power-law
-C(s) = s^D,
+__Correlation dimension__ D is defined by the power-law\
+c(s) = s^(D-1),\
+or the power-law\
+C(s) = s^D,\
 where D is correlation dimension, c(s) is correlation (fraction of distinct nodes at distance s), and C(s) is correlation integral (fraction of distinct nodes within network distance s).
 
 __To see examples__ of how to use this code, please run:\
