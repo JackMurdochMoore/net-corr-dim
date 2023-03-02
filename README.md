@@ -42,5 +42,5 @@ _show_fit_script.m:_ Illustrate fit and fitting process for empirical or synthet
 _small_world_manhattan.m:_ Generate lattice* or small world network*.\
 _small_world_manhattan_lcc.m:_ Generate lattice* or small world network* and retain only its largest connected component.
 
-\* Lattices and small world networks are derived from regular $D$-dimensional toroidal lattices defined using a periodic version of the city block (or Manhattan or taxi cab) metric mentioned but not explored in "Epidemic dynamics on higher-dimensional small world networks", _Applied Mathematics and Computation_
+\* Lattices/small world networks are/are derived from regular $D$-dimensional toroidal lattices defined using a periodic version of the city block (or Manhattan or taxi cab) metric mentioned but not explored in "Epidemic dynamics on higher-dimensional small world networks", _Applied Mathematics and Computation_
 421, 126911, by H. Wang, J. M. Moore, M. Small, J. Wang, H. Yang and C. Gu (2022) (associated code at https://github.com/JackMurdochMoore/small-world).
