@@ -1,5 +1,5 @@
 % Plot previously saved results of benchmarking different approaches to
-% estimating correlaiton dimension.
+% estimating correlation dimension.
 %
 % Associated with 
 % "Correlation dimension in empirical networks" 
