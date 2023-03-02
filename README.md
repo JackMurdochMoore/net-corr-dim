@@ -19,6 +19,12 @@ __To produce some figures__ from the manuscript, please run:\
 show_fit_script\
 plot_corr_dim_estimates
 
+__Folders:__\
+_figures_: Folder in which figures are saved.
+_networks_: Data defining empirical networks.
+_results-est-dim-3_: Folder in which results for model c(s) = s^(D-1) are saved.
+_results-est-dim-4_: Folder in which results for model C(s) = s^D are saved.
+
 __Functions and scripts:__\
 _compare_corr_dim_est_3.m:_ Estimate correlation dimension and scaling interval of synthetic networks using different methods and model c(s) = s^(D-1), and save results in folder results-est-dim-3.\
 _compare_corr_dim_est_4.m:_ Estimate correlation dimension and scaling interval of synthetic networks using different methods and model C(s) = s^D, and save results in folder results-est-dim-4.\
