@@ -34,7 +34,7 @@ _est_corr_dim_4.m:_ Estimate correlation dimension and scaling interval of a net
 _example.m:_ An example to illustrate generation of a synthetic network and estimation of its correlation dimension.\
 _find_local_minima.m:_ Find local minima in a vector.\
 _load_network.m:_ Load an empirical network from data in folder "networks".\
-_log_like_3.m:_ Calculate log-likelihood per observation for model c(s) = s^D.\
+_log_like_3.m:_ Calculate log-likelihood per observation for model c(s) = s^(D - 1).\
 _log_like_4.m:_ Calculate log-likelihood per observation for model C(s) = s^D.\
 _plot_corr_dim_estimates.m:_ Plot results of benchmarking, previously saved in folders "results-est-dim-3" and "results-est-dim-4".\
 _show_fit_func.m:_ Fit power-law to an interval and illustrate fit and objective function (negative log-likelihood per observation).\
