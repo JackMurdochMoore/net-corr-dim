@@ -7,9 +7,9 @@ by\
 Jack Murdoch Moore, Haiying Wang, Michael Small, Gang Yan, Huijie Yang, and Changgui Gu.
 
 __Correlation dimension__ D is defined by the power-law\
-c(s) = s^(D-1),\
+c(s) ∝ s^(D-1),\
 or the power-law\
-C(s) = s^D,\
+C(s) ∝ s^D,\
 where D is correlation dimension, c(s) is correlation (fraction of distinct nodes at distance s), and C(s) is correlation integral (fraction of distinct nodes within network distance s).
 
 __To see examples__ of how to use this code, please run:\
@@ -22,20 +22,20 @@ plot_corr_dim_estimates
 __Folders:__\
 _figures_: Folder in which figures are saved.\
 _networks_: Data defining empirical networks.\
-_results-est-dim-3_: Folder in which results for model c(s) = s^(D-1) are saved.\
-_results-est-dim-4_: Folder in which results for model C(s) = s^D are saved.
+_results-est-dim-3_: Folder in which results for model c(s) ∝ s^(D-1) are saved.\
+_results-est-dim-4_: Folder in which results for model C(s) ∝ s^D are saved.
 
 __Functions and scripts:__\
-_compare_corr_dim_est_3.m:_ Estimate correlation dimension and scaling interval of synthetic networks using different methods and model c(s) = s^(D-1), and save results in folder results-est-dim-3.\
-_compare_corr_dim_est_4.m:_ Estimate correlation dimension and scaling interval of synthetic networks using different methods and model C(s) = s^D, and save results in folder results-est-dim-4.\
+_compare_corr_dim_est_3.m:_ Estimate correlation dimension and scaling interval of synthetic networks using different methods and model c(s) ∝ s^(D-1), and save results in folder results-est-dim-3.\
+_compare_corr_dim_est_4.m:_ Estimate correlation dimension and scaling interval of synthetic networks using different methods and model C(s) ∝ s^D, and save results in folder results-est-dim-4.\
 _count_distances.m:_ Return vector of network distances and number of pairs of distinct nodes at each network distance.\
-_est_corr_dim_3.m:_ Estimate correlation dimension and scaling interval of a networks using different methods and model c(s) = s^(D-1).\
-_est_corr_dim_4.m:_ Estimate correlation dimension and scaling interval of a networks using different methods and model C(s) = s^D.\
+_est_corr_dim_3.m:_ Estimate correlation dimension and scaling interval of a networks using different methods and model c(s) ∝ s^(D-1).\
+_est_corr_dim_4.m:_ Estimate correlation dimension and scaling interval of a networks using different methods and model C(s) ∝ s^D.\
 _example.m:_ An example to illustrate generation of a synthetic network and estimation of its correlation dimension.\
 _find_local_minima.m:_ Find local minima in a vector.\
 _load_network.m:_ Load an empirical network from data in folder "networks".\
-_log_like_3.m:_ Calculate log-likelihood per observation for model c(s) = s^(D - 1).\
-_log_like_4.m:_ Calculate log-likelihood per observation for model C(s) = s^D.\
+_log_like_3.m:_ Calculate log-likelihood per observation for model c(s) ∝ s^(D - 1).\
+_log_like_4.m:_ Calculate log-likelihood per observation for model C(s) ∝ s^D.\
 _plot_corr_dim_estimates.m:_ Plot results of benchmarking, previously saved in folders "results-est-dim-3" and "results-est-dim-4".\
 _show_fit_func.m:_ Fit power-law to an interval and illustrate fit and objective function (negative log-likelihood per observation).\
 _show_fit_script.m:_ Illustrate fit and fitting process for empirical or synthetic networks by calling function show_fit_func.m.\
